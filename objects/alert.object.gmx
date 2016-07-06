@@ -69,10 +69,17 @@ if(mouse_check_button(mb_left)){
        alarm_time=12-((image_angle/360)*12)
     
     alarm_hour=floor(alarm_time)
-    alarm_minute=(alarm_time-alarm_hour)*60
-    
+   
+    alarm_minute=floor((alarm_time-alarm_hour)*60)
+     if(alarm_hour==0)alarm_hour=12
     alarm_string=string(alarm_hour)+":"+string(alarm_minute)
 }
+
+
+//alert triggering
+
+if((alarm_hour==current_hour||alarm_hour==current_hour-12||(current_hour==0&amp;&amp;alarm_hour==12))&amp;&amp;alarm_minute==current_minute)
+    show_message_async("Sdsd")
 </string>
           </argument>
         </arguments>
@@ -99,6 +106,11 @@ if(mouse_check_button(mb_left)){
 draw_text(x,y-120,string(image_angle))
 draw_text(x,y-140,string(point_direction(x, y, mouse_x, mouse_y)))
 draw_text(x+100,y-140,alarm_string)
+
+draw_text(x+100,y+130,string(current_hour))
+draw_text(x+100,y+140,string(current_minute))
+draw_text(x+100,y+120,string(current_minute==alarm_minute))
+draw_text(x+100,y+110,string(current_hour-12==alarm_hour))
 </string>
           </argument>
         </arguments>
