@@ -57,7 +57,7 @@ image_angle=-((hour*360/12)+(hour_angle))
             <kind>1</kind>
             <string>//minutnik
 //30fps
-//360/60*30*60
+//360/60*30*60*12
 image_angle-=360/(60*room_speed*60*12)
 </string>
           </argument>

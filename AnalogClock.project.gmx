@@ -7,8 +7,9 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_SPointer</sprite>
-    <sprite>sprites\spr_HMointer</sprite>
+    <sprite>sprites\spr_MPointer</sprite>
     <sprite>sprites\spr_Hours</sprite>
+    <sprite>sprites\spr_Alert</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Clock</background>
